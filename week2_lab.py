@@ -5,7 +5,7 @@ user_name = input('Who are we calculating grades for? ==> ')
 
 # Ask user for the grades of different categories, with values between 0 and 100, inclusive. 
 # Correct user if entered value is greater than 100 or less than 0.
-user_grade_lab = int(input('Enter the Labs grade? ==> '))
+user_grade_lab = float(input('Enter the Labs grade? ==> '))
 
 if user_grade_lab > 100:
     print('The lab value should have been 100 or less. It has been changed to 100.')
@@ -14,7 +14,7 @@ elif user_grade_lab < 0:
     print('The lab value should have been zero or greater. It has been changed to zero.')
     user_grade_lab = 0
 
-user_grade_exam = int(input('Enter the EXAMS grade> ==> '))
+user_grade_exam = float(input('Enter the EXAMS grade> ==> '))
 
 if user_grade_exam > 100:
     print('The exam value should have been 100 or less. It has been changed to 100.')
@@ -23,7 +23,7 @@ elif user_grade_exam < 0:
     print('The exam value should have been zero or greater. It has been changed to zero.')
     user_grade_exam = 0
 
-user_grade_attendance = int(input('Enter the Attendance grade? ==> '))
+user_grade_attendance = float(input('Enter the Attendance grade? ==> '))
 
 if user_grade_attendance > 100:
     print('The attendance value should have been 100 or less. It has been changed to 100.')
@@ -34,9 +34,9 @@ elif user_grade_attendance < 0:
 
     
 # Apply weights to the respective grades, and get the sum of the weighted grades, and store the value in user_total_grade.
-user_grade_lab = float(user_grade_lab) * 0.7
-user_grade_exam = float(user_grade_exam) * 0.2
-user_grade_attendance = float(user_grade_attendance) * 0.1
+user_grade_lab = user_grade_lab * 0.7
+user_grade_exam = user_grade_exam * 0.2
+user_grade_attendance = user_grade_attendance * 0.1
 user_grade_total = user_grade_lab + user_grade_exam + user_grade_attendance
 
 # Choose the letter grade based on the user_total_grade.
